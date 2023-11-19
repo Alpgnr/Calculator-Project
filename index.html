@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hesap makinesi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <form action="#" name="calculator" class="main">
+                    <div class="form-check form-switch switch-button">
+                        <input class="form-check-input" type="checkbox" onchange="changeTheme()" checked>
+                    </div>
+                    <input type="text" class="display form-control" name="display" id="display"> <br>
+
+                    <input type="button" class="btn btn-primary" value="%" onclick="appendInput('%')">
+                    &nbsp;
+                    <input type="button" class="btn btn-danger" value="CE" onclick="clearDisplay()">
+                    &nbsp;
+                    <input type="button" class="btn btn-danger" value="C" onclick="clearDisplay()">
+                    &nbsp;
+                    <input type="button" class="btn btn-warning" value="<--" onclick="backSpace()">
+                    <br><br>
+
+                    <input type="button" class="btn btn-primary" value="sin" onclick="sinX()">
+                    &nbsp;
+                    <input type="button" class="btn btn-primary" value="cos" onclick="cosX()">
+                    &nbsp;
+                    <input type="button" class="btn btn-primary" value="tan" onclick="tanX()">
+                    &nbsp;
+                    <input type="button" class="btn btn-primary" value="log" onclick="logX()">
+                    <br><br>
+
+                    <input type="button" class="btn btn-primary" value="1/x" onclick="divideX()">
+                    &nbsp;
+                    <input type="button" class="btn btn-primary" value="x²" onclick="xSquare()">
+                    &nbsp;
+                    <input type="button" class="btn btn-primary" value='²√x' onclick="xSquareRoot()">
+                    &nbsp;
+                    <input type="button" class="btn btn-primary" value="/" onclick="appendInput('/')">
+                    <br><br>
+
+
+                    <input type="button" class="btn btn-light" value="7" onclick="appendInput(7)">
+                    &nbsp;
+                    <input type="button" class="btn btn-light" value="8" onclick="appendInput(8)">
+                    &nbsp;
+                    <input type="button" class="btn btn-light" value="9" onclick="appendInput(9)">
+                    &nbsp;
+                    <input type="button" class="btn btn-primary" value="x" onclick="appendInput('*')">
+                    <br><br>
+
+
+                    <input type="button" class="btn btn-light" value="4" onclick="appendInput(4)">
+                    &nbsp;
+                    <input type="button" class="btn btn-light" value="5" onclick="appendInput(5)">
+                    &nbsp;
+                    <input type="button" class="btn btn-light" value="6" onclick="appendInput(6)">
+                    &nbsp;
+                    <input type="button" class="btn btn-primary" value="-" onclick="appendInput('-')">
+                    <br><br>
+
+
+                    <input type="button" class="btn btn-light" value="1" onclick="appendInput(1)">
+                    &nbsp;
+                    <input type="button" class="btn btn-light" value="2" onclick="appendInput(2)">
+                    &nbsp;
+                    <input type="button" class="btn btn-light" value="3" onclick="appendInput(3)">
+                    &nbsp;
+                    <input type="button" class="btn btn-primary" value="+" onclick="appendInput('+')">
+                    <br><br>
+
+
+                    <input type="button" class="btn btn-light" value="00"
+                        onclick="document.calculator.display.value+='00'">
+                    &nbsp;
+                    <input type="button" class="btn btn-light" value="0" onclick="appendInput(0)">
+                    &nbsp;
+                    <input type="button" class="btn btn-light" value="." onclick="appendInput('.')">
+                    &nbsp;
+                    <input type="button" class="btn btn-secondary" value="=" id="equal" onclick="calculate()">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
